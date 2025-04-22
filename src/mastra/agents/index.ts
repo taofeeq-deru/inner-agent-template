@@ -1,8 +1,8 @@
 import { Agent } from "@mastra/core";
-import { openai } from "@ai-sdk/openai";
+import { google } from "@ai-sdk/google";
 
 export const innerAgent = new Agent({
   name: "inner-agent",
   instructions: "You are a helpful assistant",
-  model: openai("gpt-4o")
+  model: google(process.env.MODEL ?? gemini-1.5-pro-latest)
 });
